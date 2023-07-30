@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame ()
     {
-        SceneManager.LoadScene(3); //cambiar
+        SceneManager.LoadScene(1); //cambiar
     }
 
     public void Salir()

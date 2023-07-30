@@ -770,7 +770,8 @@ GameObject:
   m_Component:
   - component: {fileID: 453303977}
   - component: {fileID: 453303976}
-  m_Layer: 0
+  - component: {fileID: 453303978}
+  m_Layer: 5
   m_Name: relleno_barra_vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,21 +830,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &453303977
-Transform:
+--- !u!224 &453303977
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453303975}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.357, y: -4.5431395, z: 0}
-  m_LocalScale: {x: 0.69, y: 0.69, z: 0.69}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1276438842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -971.8, y: -542.32}
+  m_SizeDelta: {x: -1820, y: -980}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &453303978
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453303975}
+  m_CullTransparentMesh: 1
 --- !u!1 &533635025
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,6 +1000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759259613}
   - component: {fileID: 759259614}
+  - component: {fileID: 759259615}
   m_Layer: 5
   m_Name: MainPause
   m_TagString: Untagged
@@ -1014,7 +1028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 477, y: -23}
+  m_AnchoredPosition: {x: 477, y: -22.999939}
   m_SizeDelta: {x: -1820, y: -980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759259614
@@ -1030,6 +1044,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuPausaUI: {fileID: 759259611}
+--- !u!222 &759259615
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759259611}
+  m_CullTransparentMesh: 1
 --- !u!1 &787923844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,6 +1180,7 @@ MonoBehaviour:
   - 0.5
   - 0.8
   - 0.7
+  enemySpeed: 0
 --- !u!4 &881578084
 Transform:
   m_ObjectHideFlags: 0
@@ -1574,7 +1597,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1114245428}
   - component: {fileID: 1114245427}
-  m_Layer: 0
+  - component: {fileID: 1114245429}
+  m_Layer: 5
   m_Name: barra_vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1633,21 +1657,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1114245428
-Transform:
+--- !u!224 &1114245428
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114245426}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.552, y: -4.555, z: 0}
-  m_LocalScale: {x: 0.69, y: 0.69, z: 0.69}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1276438842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -972.13, y: -542.35}
+  m_SizeDelta: {x: -1820, y: -980}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1114245429
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114245426}
+  m_CullTransparentMesh: 1
 --- !u!1 &1209974181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,7 +1725,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1257385987}
   - component: {fileID: 1257385986}
-  m_Layer: 0
+  - component: {fileID: 1257385988}
+  m_Layer: 5
   m_Name: Pausa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1748,21 +1785,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1257385987
-Transform:
+--- !u!224 &1257385987
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257385985}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.82, y: 4.35, z: 0}
-  m_LocalScale: {x: 0.7264603, y: 0.7264603, z: 0.7264603}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1276438842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -974.29, y: -526.77}
+  m_SizeDelta: {x: -1820, y: -980}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1257385988
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257385985}
+  m_CullTransparentMesh: 1
 --- !u!1 &1276438838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,6 +1909,11 @@ RectTransform:
   - {fileID: 2008134634}
   - {fileID: 533635026}
   - {fileID: 759259613}
+  - {fileID: 1863527044}
+  - {fileID: 1381967754}
+  - {fileID: 1257385987}
+  - {fileID: 1114245428}
+  - {fileID: 453303977}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2030,7 +2084,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1381967754}
   - component: {fileID: 1381967753}
-  m_Layer: 0
+  - component: {fileID: 1381967755}
+  m_Layer: 5
   m_Name: Boyas_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2089,21 +2144,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1381967754
-Transform:
+--- !u!224 &1381967754
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381967752}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.71, y: 3.46, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1276438842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -969.52, y: -528.42}
+  m_SizeDelta: {x: -1820, y: -980}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1381967755
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381967752}
+  m_CullTransparentMesh: 1
 --- !u!1 &1414220653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,7 +2434,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432110221}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b1de8bab5c89bef48b745bbef41865d8, type: 2}
   m_CullingMode: 0
@@ -2438,6 +2505,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageTimes: []
+  subStageSeparation: 10
+  gm: {fileID: 881578082}
 --- !u!1001 &1504493010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2904,7 +2973,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1863527044}
   - component: {fileID: 1863527043}
-  m_Layer: 0
+  - component: {fileID: 1863527045}
+  m_Layer: 5
   m_Name: Boyas_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2963,21 +3033,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1863527044
-Transform:
+--- !u!224 &1863527044
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863527042}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.867, y: 3.457, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1276438842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -950.29974, y: -528.48004}
+  m_SizeDelta: {x: -1820, y: -980}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1863527045
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863527042}
+  m_CullTransparentMesh: 1
 --- !u!1 &1892544834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,14 +3681,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 881578084}
   - {fileID: 57286247}
-  - {fileID: 1863527044}
-  - {fileID: 1381967754}
-  - {fileID: 1257385987}
-  - {fileID: 1114245428}
   - {fileID: 1432110228}
   - {fileID: 1984375326}
   - {fileID: 1462359945}
   - {fileID: 1504493010}
-  - {fileID: 453303977}
   - {fileID: 195525331}
   - {fileID: 1276438842}

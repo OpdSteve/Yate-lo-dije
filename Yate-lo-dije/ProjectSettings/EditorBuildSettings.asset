@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu de Perder.unity
     guid: c44f02d60779de744805d0b3f78dedb5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Steve_Trys/Game_Steve.unity
     guid: b2badfcd5a5f5744b82db390195ebfe4
   m_configObjects: {}

@@ -906,7 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f28432f39888ed408e19ecba2aaac68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuCreditosUI: {fileID: 0}
+  MenuCreditosUI: {fileID: 559824436}
 --- !u!1 &863131883
 GameObject:
   m_ObjectHideFlags: 0
