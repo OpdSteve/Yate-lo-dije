@@ -25,13 +25,13 @@ public class MainDead : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Nombre escena / numero");
+        SceneManager.LoadScene(1);
         Debug.Log("Se reinicia el juego");
     }
 
     public void GoMenu()
     {
-        SceneManager.LoadScene("Nombre escena / numero"); //Suma uno a la escena inicial (Menu es 0)
+        SceneManager.LoadScene(0); //Suma uno a la escena inicial (Menu es 0)
         Debug.Log("Se va al menu");
     }
 }
