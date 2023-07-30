@@ -9,6 +9,10 @@ public class MainPause : MonoBehaviour
     public static bool JuegoPausado = false;
     public GameObject MenuPausaUI;
 
+    private void Start()
+    {
+        Resume();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -18,7 +22,7 @@ public class MainPause : MonoBehaviour
             {
                 Resume();
             }
-            else
+            else if (JuegoPausado)
             {
                 Pause();
             }

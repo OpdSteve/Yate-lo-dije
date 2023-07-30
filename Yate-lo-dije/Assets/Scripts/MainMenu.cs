@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         MenuCreditosUI.SetActive(false);
+
     }
     public void StartGame ()
     {
