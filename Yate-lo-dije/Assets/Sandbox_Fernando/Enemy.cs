@@ -40,11 +40,12 @@ public class Enemy : MonoBehaviour {
 	void Die ()
 	{
 		//Instantiate(deathEffect, transform.position, Quaternion.identity);
-		if (Random.value < gm.GetComponent<GameManager>().dropProbabilities[(int)enemyType])
-        {
-			GameObject newDrop = Instantiate(drop, transform.position, Quaternion.identity);
-			newDrop.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
-        }
+		//if (Random.value < gm.GetComponent<GameManager>().dropProbabilities[(int)enemyType])
+  //      {
+		//	GameObject newDrop = Instantiate(drop, transform.position, Quaternion.identity);
+		//	newDrop.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+  //      }
+		gm.GetComponent<GameManager>().addScore(300);
 		Destroy(gameObject);
 	}
 

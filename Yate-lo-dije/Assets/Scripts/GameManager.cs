@@ -36,4 +36,9 @@ public class GameManager : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
             SceneManager.LoadScene(0);
     }
+
+    public void addScore(int newScore)
+    {
+        score += newScore;
+    }
 }
