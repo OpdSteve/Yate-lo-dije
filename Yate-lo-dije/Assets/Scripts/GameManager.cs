@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int destroyedAcorazados;
     public int destroyedHelicopteros;
     public float[] dropProbabilities;
+    public float enemySpeed;
     // Start is called before the first frame update
     void Start()
     {
