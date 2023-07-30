@@ -6,23 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class MainPause : MonoBehaviour
 {
-    public static bool JuegoPausado = false;
+    public static bool JuegoPausado;
     public GameObject MenuPausaUI;
 
     private void Start()
     {
-        Resume();
+        MenuPausaUI.SetActive(false);
+        JuegoPausado = false;
     }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (JuegoPausado)
+            if (JuegoPausado == true)
             {
                 Resume();
             }
-            else if (JuegoPausado)
+            else if (JuegoPausado == false)
             {
                 Pause();
             }
@@ -48,7 +49,7 @@ public class MainPause : MonoBehaviour
     public void Reiniciar()
     {
         Debug.Log("Se reinicia el juego");
-        SceneManager.LoadScene(3); //cambiar
+        SceneManager.LoadScene(1);
     }
 
     public void SalirAlEscritorio()
