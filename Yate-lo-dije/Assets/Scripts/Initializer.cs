@@ -34,7 +34,6 @@ public class InitPosition : MonoBehaviour
         {
             if (isRightBorder)
             {
-                Debug.Log("enemy activated");
                 enemy.GetComponent<Enemy>().enabled = true;
                 enemy.GetComponent<PrefabWeapon>().enabled = true;
             }

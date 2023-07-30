@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Despawner
   - Drop
+  - Enemy
   layers:
   - Default
   - TransparentFX

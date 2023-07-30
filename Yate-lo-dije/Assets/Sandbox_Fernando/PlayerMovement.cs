@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public float bwdSpeedRate = 2f;
     public float sideSpeedRate = 2f;
     public float camSpeedOffset;
+    public int collisionDamage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,15 @@ public class PlayerMovement : MonoBehaviour
     {
         fwdInput = Input.GetAxisRaw("Forward");
         sideInput = Input.GetAxisRaw("Vertical");
+    }
+
+    private void OnCollisionEnter2D(Collision2D hitInfo)
+    {
+        if (hitInfo.gameObject.CompareTag("Enemy"))
+        {
+            gameObject.GetComponent<PlayerController>().TakeDamage(collisionDamage);
+            hitInfo.gameObject.GetComponent<Enemy>().TakeDamage(collisionDamage);
+        }
     }
 
     private void FixedUpdate()
