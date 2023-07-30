@@ -20,7 +20,8 @@ public class StageInitializer : MonoBehaviour
         float timeToStage = 0f;
         for (int i = 0; i < stageIndex; i++)
             timeToStage += stageTimes[i];
-        stagePosition += Camera.main.velocity.x * timeToStage;
+        stagePosition += Camera.main.GetComponent<runMap>().movementspeed * timeToStage;
+        transform.GetChild(stageIndex).position = new Vector3(stagePosition, 0f, 0f);
     }
 
     // Update is called once per frame

@@ -24,7 +24,8 @@ public class Enemy : MonoBehaviour {
 		gm = GameObject.Find("GameManager");
 		Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
 		rb.velocity = Camera.main.GetComponent<Rigidbody2D>().velocity - new Vector2(velocity, 0f);
-    }
+						//Debug.Log(rb.velocity);
+	}
 
     public void TakeDamage (int damage)
 	{

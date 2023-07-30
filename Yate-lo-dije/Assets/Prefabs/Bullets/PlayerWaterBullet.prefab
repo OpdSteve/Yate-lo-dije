@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7898561881079733719}
   - component: {fileID: 2621577154990533703}
   - component: {fileID: -7009573409900932911}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlayerWaterBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 1
-  isWaterAttack: 0
   isPlayerBullet: 1
   rb: {fileID: 2621577154990533703}
 --- !u!50 &2621577154990533703
@@ -124,7 +123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2062932034643306308}
   - component: {fileID: 7012488421722528694}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

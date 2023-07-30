@@ -18,7 +18,7 @@ public class PrefabWeapon : MonoBehaviour {
 
     private void Start()
     {
-		lastShot = Time.time;
+		lastShot = 0f;
 	}
     // Update is called once per frame
     void Update () {
