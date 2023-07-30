@@ -51,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
             gameObject.GetComponent<PlayerController>().TakeDamage(collisionDamage);
             hitInfo.gameObject.GetComponent<Enemy>().TakeDamage(collisionDamage);
         }
+        if (hitInfo.gameObject.CompareTag("Finish"))
+        {
+            Camera.main.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+        }
     }
 
     private void FixedUpdate()
