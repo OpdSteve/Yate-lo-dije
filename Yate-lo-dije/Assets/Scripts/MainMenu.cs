@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject MenuCreditosUI;
+
+    private void Start()
+    {
+        MenuCreditosUI.SetActive(false);
+    }
     public void StartGame ()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Suma uno a la escena inicial (Menu es 0)
@@ -16,3 +22,4 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 }
+
