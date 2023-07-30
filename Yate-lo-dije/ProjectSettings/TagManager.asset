@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Despawner
+  - Drop
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Background
+  - Enemies water
+  - Player
+  - Enemies air
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2713877847
+    locked: 0
+  - name: Enemies Water
+    uniqueID: 3841720301
+    locked: 0
+  - name: Player
+    uniqueID: 3260539659
+    locked: 0
+  - name: Enemies Air
+    uniqueID: 3198294897
+    locked: 0
+  - name: UI
+    uniqueID: 2546945051
+    locked: 0
