@@ -30,6 +30,12 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (hasShield)
+        {
+            // deactivate shield prop
+            hasShield = false;
+            return;
+        }
         health -= damage;
 
         if (health <= 0)
