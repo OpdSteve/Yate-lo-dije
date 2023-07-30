@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Restos : MonoBehaviour
+public class MainDead : MonoBehaviour
 {
 
     private int puntos;
@@ -23,13 +23,15 @@ public class Restos : MonoBehaviour
         
     }
 
-    public void Reiniciar()
+    public void Restart()
     {
         SceneManager.LoadScene("Nombre escena / numero");
+        Debug.Log("Se reinicia el juego");
     }
 
-    public void VolverAlMenu()
+    public void GoMenu()
     {
         SceneManager.LoadScene("Nombre escena / numero"); //Suma uno a la escena inicial (Menu es 0)
+        Debug.Log("Se va al menu");
     }
 }

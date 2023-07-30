@@ -30,6 +30,7 @@ public class MainPause : MonoBehaviour
         MenuPausaUI.SetActive(false);
         Time.timeScale = 1f;
         JuegoPausado = false;
+        Debug.Log("Se renauda el juego");
     }
 
     public void Pause()
@@ -37,10 +38,12 @@ public class MainPause : MonoBehaviour
         MenuPausaUI.SetActive(true);
         Time.timeScale = 0f;
         JuegoPausado = true;
+        Debug.Log("Se pausa el juego");
     }
 
     public void Reiniciar()
     {
+        Debug.Log("Se reinicia el juego");
         SceneManager.LoadScene("Nombre escena / numero");
     }
 
@@ -52,7 +55,7 @@ public class MainPause : MonoBehaviour
 
     public void VolverAlMenu()
     {
+        Debug.Log("Se va al menu");
         SceneManager.LoadScene("Nombre escena / numero"); //Suma uno a la escena inicial (Menu es 0)
     }
-
 }
