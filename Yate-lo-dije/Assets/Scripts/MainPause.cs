@@ -44,7 +44,7 @@ public class MainPause : MonoBehaviour
     public void Reiniciar()
     {
         Debug.Log("Se reinicia el juego");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3); //cambiar
     }
 
     public void SalirAlEscritorio()
@@ -56,6 +56,6 @@ public class MainPause : MonoBehaviour
     public void VolverAlMenu()
     {
         Debug.Log(0);
-        SceneManager.LoadScene("Nombre escena / numero"); //Suma uno a la escena inicial (Menu es 0)
+        SceneManager.LoadScene(0); //Suma uno a la escena inicial (Menu es 0)
     }
 }

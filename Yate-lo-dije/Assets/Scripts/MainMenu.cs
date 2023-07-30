@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Suma uno a la escena inicial (Menu es 0)
+        SceneManager.LoadScene(3); //cambiar
     }
 
     public void Salir()
