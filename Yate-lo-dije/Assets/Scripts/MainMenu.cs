@@ -19,7 +19,6 @@ public class MainMenu : MonoBehaviour
 
     public void Salir()
     {
-        Debug.Log("Cerrado");
         Application.Quit();
     }
 }

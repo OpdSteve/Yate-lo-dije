@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	public enum EnemyType
-	{
-		Fragata,
-		Acorazado,
-		Helicoptero
-	}
-	[SerializeField]
-	private EnemyType enemyType = EnemyType.Fragata;
+	//public enum EnemyType
+	//{
+	//	Fragata,
+	//	Acorazado,
+	//	Helicoptero
+	//}
+	//[SerializeField]
+	//private EnemyType enemyType = EnemyType.Fragata;
 	public int health = 100;
 	public GameObject drop;
 	private GameObject gm;

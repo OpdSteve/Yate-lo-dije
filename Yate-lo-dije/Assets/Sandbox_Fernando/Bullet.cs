@@ -27,6 +27,8 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
 	{
+		if (hitInfo.CompareTag("Despawner"))
+			Destroy(gameObject);
 		if (isPlayerBullet)
 		{
 			Enemy enemy = hitInfo.gameObject.GetComponent<Enemy>();

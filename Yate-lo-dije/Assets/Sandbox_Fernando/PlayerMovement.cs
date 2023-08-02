@@ -4,29 +4,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Reference rigidbody to alter its velocity
-    private Rigidbody2D rb;
-    // Reference camera rigidbody to access its velocity
     public Rigidbody2D camRb;
-    // Reference max dist transform to access the max position of the boat
     public Transform maxDistTransform;
-
-    // Reference max dist transform to access the max position of the boat
     public Transform minDistTransform;
-
-    // Reference max dist transform to access the max position of the boat
-    public Transform leftSideTransform;
-
-    // Reference max dist transform to access the max position of the boat
-    public Transform rightSideTransform;
-
-    // Reference back collider
-
+    public Transform TopBorderTransform;
+    public Transform BotBorderTransform;
     public float fwdSpeedRate = 2f;
     public float bwdSpeedRate = 2f;
     public float sideSpeedRate = 2f;
-    public float camSpeedOffset;
+    public float speedDamper = 0.5f;
+    public float dampChangeRate = 0.01f;
+    public float minDamp = 0.5f;
+    public float maxDamp = 0.5f;
     public int collisionDamage = 1;
+
+
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +35,10 @@ public class PlayerMovement : MonoBehaviour
     {
         fwdInput = Input.GetAxisRaw("Forward");
         sideInput = Input.GetAxisRaw("Vertical");
+        //float mouse = Input.mouseScrollDelta.y;
+        //if (mouse != 0)
+        //    ChangeSpeedDamper(mouse);
+            
     }
 
     private void OnCollisionEnter2D(Collision2D hitInfo)
@@ -70,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
             ySpeed += getLeftSideSpeed();
         else if (sideInput < 0f)
             ySpeed -= getRightSideSpeed();
-        rb.velocity = new Vector2(xSpeed + camRb.velocity.x * 2, ySpeed);
+        rb.velocity = new Vector2(xSpeed + Camera.main.GetComponent<runMap>().movementspeed, ySpeed);
     }
 
     private float getRightSideSpeed()
@@ -78,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         float sideSpeed;
         float distToSide;
 
-        distToSide = Mathf.Abs(transform.position.y - rightSideTransform.position.y);
+        distToSide = Mathf.Abs(transform.position.y - BotBorderTransform.position.y);
         sideSpeed = sideSpeedRate * distToSide;
 
         return sideSpeed;
@@ -89,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         float sideSpeed;
         float distToSide;
 
-        distToSide = Mathf.Abs(transform.position.y - leftSideTransform.position.y);
+        distToSide = Mathf.Abs(transform.position.y - TopBorderTransform.position.y);
         sideSpeed = sideSpeedRate * distToSide;
 
         return sideSpeed;
@@ -114,11 +111,16 @@ public class PlayerMovement : MonoBehaviour
 
         distToMax = maxDistTransform.position.x - transform.position.x;
         if (distToMax < 0)
-            distToMax = camSpeedOffset * camRb.velocity.x;
-        fwdSpeed = fwdSpeedRate * distToMax;
+            distToMax = 0;
+        fwdSpeed = fwdSpeedRate * distToMax * speedDamper;
 
         return fwdSpeed;
     }
 
-
+    //private void ChangeSpeedDamper(float mouse)
+    //{
+    //    if ((speedDamper <= minDamp && mouse < 0) || (speedDamper >= maxDamp && mouse > 0))
+    //        return;
+    //    speedDamper = speedDamper + dampChangeRate * mouse;
+    //}
 }

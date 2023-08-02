@@ -29,10 +29,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("trigger");
         if (collision.gameObject.CompareTag("Finish"))
         {
-            Debug.Log("inside trigger");
             Camera.main.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 0f, 0f);
         }
     }
@@ -58,4 +56,5 @@ public class PlayerController : MonoBehaviour
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+
 }
