@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D camRb;
     public Transform maxDistTransform;
     public Transform minDistTransform;
     public Transform TopBorderTransform;
@@ -48,10 +47,6 @@ public class PlayerMovement : MonoBehaviour
             gameObject.GetComponent<PlayerController>().TakeDamage(collisionDamage);
             hitInfo.gameObject.GetComponent<Enemy>().TakeDamage(collisionDamage);
         }
-        if (hitInfo.gameObject.CompareTag("Finish"))
-        {
-            Camera.main.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
-        }
     }
 
     private void FixedUpdate()
@@ -67,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
             ySpeed += getLeftSideSpeed();
         else if (sideInput < 0f)
             ySpeed -= getRightSideSpeed();
-        rb.velocity = new Vector2(xSpeed + Camera.main.GetComponent<runMap>().movementspeed, ySpeed);
+        rb.velocity = new Vector2(xSpeed, ySpeed);
     }
 
     private float getRightSideSpeed()

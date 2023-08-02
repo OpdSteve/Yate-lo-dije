@@ -8,21 +8,17 @@ public class Bullet : MonoBehaviour {
 	public int damage = 40;
 	public bool isPlayerBullet = false;
 	public Rigidbody2D rb;
-	//public Camera cam;
-	//public GameObject impactEffect;
-	// Use this for initialization
+
 	void Start () {
-		Vector3 camSpeed = Camera.main.GetComponent<Rigidbody2D>().velocity;
 		if (isPlayerBullet)
-			rb.velocity = transform.right * speed + camSpeed;
+			rb.velocity = transform.right * speed;
 		else
-			rb.velocity = -transform.right * speed + camSpeed;
+			rb.velocity = -transform.right * speed;
 	}
 
     private void Update()
     {
-		if (Mathf.Abs(transform.position.y) > 10f)
-			Destroy(gameObject);
+
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
