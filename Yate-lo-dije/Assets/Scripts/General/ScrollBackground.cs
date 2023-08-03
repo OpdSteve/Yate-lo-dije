@@ -11,18 +11,29 @@ public class ScrollBackground : MonoBehaviour
     private float resetDistance;
     void Start()
     {
-        resetCollider = transform.GetChild(4).GetComponent<Collider2D>();
+        resetCollider = transform.Find("ResetCollider").GetComponent<Collider2D>();
         GetComponent<Rigidbody2D>().velocity = new Vector2(-scrollSpeed, 0f);
-        resetDistance = (transform.GetChild(2).TransformDirection(Vector2.zero).x - transform.GetChild(1).TransformDirection(Vector2.zero).x) / 2;
+        Debug.Log(transform.Find("Agua2").position.x + " - " + transform.Find("Agua1").position.x);
+        resetDistance = Mathf.Abs(transform.Find("Agua2").position.x - transform.Find("Agua1").position.x);
+        Debug.Log(resetDistance);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!showEnd && collision.CompareTag("MainCamera"))
+        {
+            transform.position = new Vector2(-resetDistance, 0f);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (resetCollider.IsTouching(Camera.main.transform.GetChild(6).GetComponent<Collider2D>()) && !showEnd)
-        {
-            transform.position = new Vector2(resetDistance, 0f);
-        }
+        //if (resetCollider.IsTouching(Camera.main.transform.Find("ScrollCollider").GetComponent<Collider2D>()) && !showEnd)
+        //{
+            
+        //    Debug.Log(transform.position);
+        //}
     }
 
     public void ShowEnd()
